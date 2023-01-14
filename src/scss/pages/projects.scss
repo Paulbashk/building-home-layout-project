@@ -1,0 +1,315 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Pages: Все проекты ------------------------------
+//  ------------------------------------------------------------------------------
+
+.sc-projects {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__wrapper {
+    row-gap: 30px;
+
+    &--catalog {
+      margin-bottom: 50px;
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__main-title {
+    margin-bottom: 40px;
+
+    @media (max-width: $breakpoint-md) {
+      text-align: center;
+    }
+
+    &--catalog {
+      margin-bottom: 24px;
+      text-transform: uppercase;
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  &__wrapper-title {
+    margin-bottom: 40px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrapper-background {
+    background-color: $mainGray;
+    border-radius: 4px;
+    padding: 24px 46px 40px 32px;
+    margin-bottom: 32px;
+
+    @media (max-width: $breakpoint-md) {
+      background: none;
+      border-radius: 0;
+      position: relative;
+      padding: 20px 0 30px 0;
+    }
+
+    &::before {
+      content: '';
+      display: none;
+
+      @media (max-width: $breakpoint-md) {
+        position: absolute;
+        display: block;
+        background-color: $mainGray;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        left: -30px;
+        z-index: 0;
+      }
+
+      @media (max-width: $breakpoint-xsm) {
+        left: -15px;
+      }
+    }
+  }
+
+  &__container-size {
+    max-width: 1120px;
+
+    @media (max-width: $breakpoint-md) {
+      max-width: unset;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__wrapper-filters {
+    display: flex;
+    margin-bottom: 40px;
+
+    @media (max-width: $breakpoint-lg) {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      column-gap: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__wrapper-select {
+    margin-right: 20px;
+
+    @media (max-width: $breakpoint-lg) {
+      grid-column: span 2;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-column: span 4;
+    }   
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--home {
+      max-width: calc(32% - (20px * 3) / 4);
+      width: calc(32% - (20px * 3) / 4);
+
+      @media (max-width: $breakpoint-lg) {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+
+    &--square {
+      max-width: calc(23% - (20px * 3) / 4);
+      width: calc(23% - (20px * 3) / 4);
+
+      @media (max-width: $breakpoint-lg) {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+
+    &--material {
+      max-width: calc(23% - (20px * 3) / 4);
+      width: calc(23% - (20px * 3) / 4);
+
+      @media (max-width: $breakpoint-lg) {
+        max-width: unset;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    &--dimensions {
+      max-width: calc(23% - (20px * 3) / 4);
+      width: calc(23% - (20px * 3) / 4);
+
+      @media (max-width: $breakpoint-lg) {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
+
+  &__project {
+    grid-column: span 4;
+
+    @media (max-width: $breakpoint-xl) {
+      grid-column: span 6;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-column: span 12;
+
+      &:nth-child(1n+5) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-column: span 6;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: span 6;
+    }
+  }
+
+  &__wrapper-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__wrapper-flex {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__wrapper-checkboxes {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $breakpoint-lg) {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      column-gap: 32px;
+      row-gap: 16px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      row-gap: 8px;
+    }
+  }
+
+  &__wrapper-checkbox {
+    margin-right: 32px;
+
+    @media (max-width: $breakpoint-xl) {
+      margin-right: 15px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      grid-column: span 2;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      align-items: unset;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__title-checkboxes {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 12px;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 12px;
+    }
+  }
+
+  &__wrapper-button {
+    max-width: 246px;
+
+    @media (max-width: $breakpoint-md) {
+      max-width: 217px;
+    }
+  }
+
+  &__btn--clear {
+    margin-right: 28px;
+
+    @media (max-width: $breakpoint-xl) {
+      margin-right: 16px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      margin-right: 0;
+      align-self: flex-end;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      margin: auto 0;
+      margin-right: 20px;
+    }
+  }
+
+  &--singlehome {
+    margin-bottom: 70px;
+    display: block;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 80px;
+    }
+
+    #{ $self }__project {
+      @media (max-width: $breakpoint-md) {
+        &:nth-child(1n+5) {
+          display: block;
+        }
+      }
+    }
+  }  
+}

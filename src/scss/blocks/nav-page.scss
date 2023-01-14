@@ -1,0 +1,46 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Blocks Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+.nav-page {
+  margin: 40px 0 45px 0;
+
+  @media (max-width: $breakpoint-md) {
+    margin: 20px 0 16px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    opacity: .7;
+    transition: opacity $timeTrans linear;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '/';
+      font-family: $mainFamily;
+      display: block;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      color: inherit;
+      user-select: none;
+      margin: 0 2px;
+    }
+  }
+}

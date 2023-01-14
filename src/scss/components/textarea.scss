@@ -1,0 +1,63 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+.wrapper-textarea {
+  $self: &;
+
+  $textareaBackground: #F3F3F3;
+  $textareaBorder: 1px solid #E2E2E2;
+  $textareaTextColor: #2f2f2f;
+
+  $textareaBackgroundHover: #fff;
+  $textareaBorderHover: 1px solid #E2E2E2;
+  $textareaTextColorHover: #2f2f2f;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+
+  &__textarea {
+    @include transition-colors;
+    @include setText(14px, normal, 100);
+    font-family: ProximaNovaT;
+    max-width: 100%;
+    width: 100%;
+    min-height: 102px;
+    max-height: 102px;
+    background-color: $textareaBackground;
+    color: $textareaTextColor;
+    padding: 20px;
+    border-radius: 4px;
+    border: $textareaBorder;
+
+    @media (max-width: $breakpoint-md) {
+      @include setText(12px, normal, 100);
+      min-height: 67px;
+      max-height: 67px;
+      padding: 15px 15px;
+    }
+
+    &::placeholder {
+      @include setText(14px, normal, 100);
+      font-family: ProximaNovaT;
+      color: $textareaTextColor;
+
+      @media (max-width: $breakpoint-md) {
+        @include setText(12px, normal, 100);
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $textareaBackgroundHover;
+      border: $textareaBorderHover;
+      color: $textareaTextColorHover;
+
+      &::placeholder {
+        color: $textareaTextColorHover;
+      }
+    }
+  }
+}

@@ -1,0 +1,261 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+.modal {
+  $self: &;
+  $maxWidth: unset;
+  $maxHeight: unset;
+  $sizeWidth: 454px;
+  $sizeHeight: auto;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $timeTrans linear;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+  }
+
+  &__dialog {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    z-index: 9999;
+    max-width: $maxWidth;
+    max-height: $maxHeight;  
+    width: $sizeWidth;
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      padding: 0 30px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 16px;
+    outline: 0;
+
+    &--size {
+      width: $sizeWidth;
+      height: $sizeHeight;
+
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    width: 17px;
+    height: 14px;
+    min-width: 17px;
+    min-height: 14px;
+    margin-right: 16px;
+    margin-top: 16px;
+    opacity: 1;
+    transition: opacity .1s ease;
+
+    @media (max-width: $breakpoint-md) {
+      right: 30px;
+      margin-right: 16px;
+      margin-top: 16px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: .5;
+    }
+  }
+
+  &__icon--close {
+    display: block;
+    width: 17px;
+    height: 14px;
+    min-width: 17px;
+    min-height: 14px;   
+
+    #{ $self }__svg {
+
+      #{ $self }__path {
+        width: 17px;
+        height: 14px;
+        min-width: 17px;
+        min-height: 14px;
+        stroke: #555555;
+      }
+    }
+  }
+
+  &--visible {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+  }
+
+  &--feedback {
+    #{ $self }__container-content {
+      padding: 30px 30px 50px 38px;
+
+      @media (max-width: $breakpoint-md) {
+        padding: 24px 24px 32px 24px;
+      }
+    }
+
+    #{ $self }__wrapper-title {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 24px;
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 16px;
+      }
+    }
+
+    #{ $self }__title {
+      display: block;
+      font-family: $mainFamily;
+      font-weight: 700;
+      font-size: 35px;
+      max-width: 290px;
+      line-height: 44px;
+      color: #282828;
+      margin-bottom: 16px;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 23px;
+        line-height: 29px;
+        max-width: 195px;
+      }
+
+      @media (max-width: $breakpoint-xsm) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  
+    #{ $self }__text-red {
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: #d13230;
+    }
+    
+    #{ $self }__desc {
+      font-family: Raleway;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: normal;
+      color: #2f2f2f;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 13px;
+        max-width: 302px;
+      }
+    }
+
+    #{ $self }__wrapper-inputs {
+      margin-bottom: 32px;
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 16px;
+      }
+    }
+
+    #{ $self }__wrapper-input {
+      margin-bottom: 20px;
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 14px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    #{ $self }__wrapper-select {
+      margin-bottom: 20px;
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 14px;
+      }
+    }
+
+    #{ $self }__wrapper-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    #{ $self }__text-agreement {
+      display: inline-block;
+      font-family: ProximaNovaT;
+      font-weight: 100;
+      font-size: 14px;
+      line-height: normal;
+      color: #2f2f2f;
+      margin-bottom: 24px;
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 16px;
+        max-width: 342px;
+      }
+    }
+
+    #{ $self }__wrapper-button {
+      max-width: 248px;
+
+      @media (max-width: $breakpoint-sm) {
+        max-width: 164px;
+      }
+    }
+  }
+
+  &--question {
+    #{ $self }__container-content {
+      padding: 30px 30px 30px 38px;
+
+      @media (max-width: $breakpoint-md) {
+        padding: 32px 16px 20px 16px;
+      }
+    }
+
+    #{ $self }__title {
+      max-width: unset;
+    }
+  }
+}

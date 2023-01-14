@@ -1,0 +1,101 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Typography Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+
+.title-h1 {
+  @include setText(37px, normal, 600);
+  color: $colorMainText;
+  text-transform: uppercase;
+  font-family: $mainFamily;
+
+  @media (max-width: $breakpoint-xl) {
+    @include setText(32px, normal, 600);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    @include setText(22px, normal, 600);
+  }
+}
+
+.title-h2 {
+  @include setText(42px, 52px, 700);
+  color: $colorMainText;
+  font-family: $mainFamily;
+
+  @media (max-width: $breakpoint-md) {
+    @include setText(26px, 33px, 700);
+  }
+}
+
+.title-h3 {
+  @include setText(24px, normal, 600);
+  color: $colorMainText;
+  font-family: $mainFamily;
+
+  @media (max-width: $breakpoint-xl) {
+    @include setText(22px, normal, 600);
+  }
+
+  @media (max-width: $breakpoint-xsm) {
+    @include setText(17px, normal, 600);
+  }
+
+
+  &--var2 {
+    @include setText(18px, normal, 700);
+
+    @media (max-width: $breakpoint-md) {
+      @include setText(15px, normal, 700);
+    }
+  }
+}
+
+.text {
+  @include setText(18px, normal, 400);
+  color: $colorMainText;
+  font-family: $mainFamily;
+
+  @media (max-width: $breakpoint-md) {
+    @include setText(16px, normal, 400);
+  }
+}
+
+.text-min {
+  @include setText(14px, normal, 400);
+  color: $colorMainText;
+  font-family: $mainFamily;
+}
+
+.text-span {
+  @include setText(18px, normal, 400);
+  color: $colorMainText;
+  font-family: $mainFamily;
+
+  @media (max-width: $breakpoint-md) {
+    @include setText(16px, normal, 400);
+  }
+}
+
+.text-strong {
+  @include setText(18px, normal, 400);
+  color: $colorMainText;
+  font-family: $mainFamily;
+
+  @media (max-width: $breakpoint-md) {
+    @include setText(16px, normal, 400);
+  }
+}
+
+.text-link {
+  @include setText(15px, 22px, 400);
+  color: $colorMainText;
+  display: block;
+  text-decoration: none;
+	user-select: none; 
+  font-family: $mainFamily;
+
+  @media (max-width: $breakpoint-md) {
+    @include setText(14px, 21px, 600);
+  }
+}

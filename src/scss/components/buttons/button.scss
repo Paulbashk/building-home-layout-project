@@ -1,0 +1,157 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Components Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+.btn {
+  $self: &;
+  @include flex-center;
+  @include transition-colors;
+  @include setText(16px, 24px, 700);
+
+  $btnBackground: #FFA101;
+  $btnTextColor: #000;
+  $btnBorderColor: #000;
+
+  $btnBackgroundHover: #FF7701;
+  $btnTextColorHover: #fff;
+  $btnBorderColorHover: #000;  
+  
+  font-family: $mainFamily;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px;
+  min-height: 56px;
+  max-height: 56px;
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+
+  &--red {
+    opacity: 1;
+    background-color: #F12D2B;
+    color: #fff;
+    border: none;
+    transition: opacity $timeTrans linear;
+
+    &:hover {
+      opacity: .8;
+      background-color: #F12D2B;
+      color: #fff;
+      border: none;
+    }
+  }
+
+  &--checkout {
+    max-height: 46px;
+    min-height: 46px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+
+    @media (max-width: $breakpoint-md) {
+      max-height: 56px;
+      min-height: 56px;
+      font-size: 15px;
+    }
+  }
+
+  &--more {
+    padding: 12px 20px;
+    border: 2px solid #545454;
+    background-color: transparent;
+    color: #555555;
+    min-height: 40px;
+    max-height: 40px;
+
+    @media (max-width: $breakpoint-md) {
+      padding: 10px 16px;
+      font-size: 13px;
+      min-height: 32px;
+      max-height: 32px;
+    }
+
+    &:hover {
+      border: 2px solid #F12D2B;
+      background-color: #F12D2B;
+      color: #fff;
+    }
+  }
+
+  &--clear {
+    background: none;
+    color: #555555;
+    max-width: unset;
+    width: auto;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    min-height: unset;
+    max-height: unset;
+    opacity: 1;
+    transition: opacity $timeTrans linear;
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 1px solid #D8D8D8;
+  
+    @media (max-width: $breakpoint-md) {
+      font-size: 12px;
+      height: 14px;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background: none;
+      color: #555555; 
+      border: none;   
+      border-bottom: 1px solid #D8D8D8;
+      opacity: .8;
+    }
+  }
+
+  &--result {
+    padding: 18px 48px;
+    min-height: 46px;
+    max-height: 46px;
+    font-weight: 600;
+
+    @media (max-width: $breakpoint-xl) {
+      padding: 18px 32px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 18px 48px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 14px;
+      min-height: 40px;
+      max-height: 40px;
+      padding: 16px 44px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      padding: 16px 24px;
+    }
+  }
+
+  &--submit {
+    padding: 18px 54px;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 248px;
+    min-height: 46px;
+    max-height: 46px;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+      min-width: 164px;
+      font-size: 10px;
+      padding: 12px 16px;
+      font-size: 13px;
+      min-height: 40px;
+      max-height: 40px;
+    }
+  }
+}

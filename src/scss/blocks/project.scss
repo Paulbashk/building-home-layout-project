@@ -1,0 +1,220 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Blocks Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+.project {
+  $self: &;
+
+  border-radius: 4px;
+  transition: box-shadow $timeTrans linear;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,.25);
+
+    #{ $self }__img {
+      transform: scale(1.1);
+    }
+
+    #{ $self }__title-h3 {
+      opacity: .8;
+    }
+
+    #{ $self }__btn {
+      border: 2px solid #F12D2B;
+      background-color: #F12D2B;
+      color: #fff;
+    }
+  }
+
+  &__img-link,
+  &__wrapper-img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    max-height: 283px;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-xl) {
+      max-height: 320px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      max-height: 283px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      max-height: 208px;
+    }
+  }
+
+  &__img {
+    height: 283px;
+    transition: transform $timeTrans linear;
+
+    @media (max-width: $breakpoint-xl) {
+      height: 320px;
+      object-fit: fill;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      height: 283px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      height: 208px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__wrapper-content {
+    padding: 25px 28px 35px 28px;
+    border-bottom: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    border-left: 1px solid #E8E8E8;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    @media (max-width: $breakpoint-xl) {
+      padding: 25px 24px 25px 24px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      padding: 18px 20px 24px 20px;
+    }
+  }
+
+  &__title-h3 {
+    margin-bottom: 16px;
+    opacity: 1;
+    transition: opacity $timeTrans linear;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 12px;
+    }
+
+    &:hover {
+     opacity: .8;
+    }
+  }
+
+  &__wrapper-title {
+    margin-bottom: 30px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__link,
+  &__footage {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+  }
+
+  &__footage {
+    display: inline-block;
+    color: #F6312E;
+  }
+
+  &__wrapper-prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint-xsm) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $breakpoint-xsm) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__wrapper-button {
+    @media (max-width: $breakpoint-xsm) {
+      align-self: center;
+    }
+  
+  }
+
+  &__price-top {
+    font-family: $mainFamily;
+    margin-bottom: 8px;
+    font-size: 17px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      margin-bottom: 0;
+      margin-right: 4px;
+    }
+  }
+
+  &__price-bottom {
+    font-family: $mainFamily;
+    font-size: 24px;
+    color: #d53533;
+    font-weight: 800;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      font-size: 16px;
+    }
+  }
+
+  &__text-clip {
+    display: -webkit-box;
+    max-height: 66px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+
+    @media (max-width: $breakpoint-md) {
+      display: block;
+      max-height: unset;
+      overflow: unset;
+      text-overflow: unset;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset; 
+    }
+  }
+
+  &__desc {
+    display: block;
+    font-size: 16px;
+
+    @media (max-width: $breakpoint-xl) {
+      font-size: 16px;
+    }
+  
+    @media (max-width: $breakpoint-md) {
+      font-size: 14px;
+    }
+  }
+}

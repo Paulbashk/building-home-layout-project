@@ -1,0 +1,39 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- Animations Files ---------------------------------
+//  ------------------------------------------------------------------------------
+
+// ANIMATION: PRELOADER
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+// ANIMATION: MODAL
+@keyframes modalOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// ANIMATION: MODAL
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  10% {
+    display: block;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,28 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+.checkmark {
+  display: flex;
+
+  &__icon {
+    margin-right: 32px;
+    position: relative;
+    top: 2px;
+
+    @media (max-width: $breakpoint-md) {
+      top: 4px;
+      margin-right: 24px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    max-width: 438px;
+
+    @media (max-width: $breakpoint-md) {
+      max-width: unset;
+      font-size: 15px;
+    }
+  }
+}

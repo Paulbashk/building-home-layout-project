@@ -1,0 +1,167 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+.js-tabs {
+  $self: &;
+
+  &__tab:hover {
+    cursor: pointer;
+  }
+
+  &__content {
+    display: none;
+
+    &.active {
+      display: block;
+      animation-name: fadeIn;
+      animation-timing-function: linear;
+      animation-duration: 1s;
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    &__content-container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__tab--tabtext {
+    font-family: $mainFamily;
+    display: block;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #B2B2B2;
+    transition: color $timeTrans linear;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 21px;
+      line-height: 26px;
+    }
+
+    &:hover,
+    &.active {
+      color: $colorMainText;   
+    }
+  }
+
+  &--details {
+    display: flex;
+    flex-direction: column;
+
+    #{ $self }__nav {
+      margin-bottom: 30px;
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 35px;
+      }
+    }
+
+    #{ $self }__tabs-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @media (max-width: $breakpoint-sm) {
+        justify-content: space-between;
+      }
+    }
+
+    #{ $self }__tab {
+      margin-right: 64px;
+
+      @media (max-width: $breakpoint-md) {
+        margin-right: 56px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        margin-right: 16px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--charact {
+    #{ $self }__nav {
+      margin-bottom: 72px;
+
+      @media (max-width: $breakpoint-lg) {
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 38px;
+      }
+    }
+
+    #{ $self }__tabs-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-right: -24px;
+      margin-bottom: -16px;
+
+      @media (max-width: $breakpoint-lg) {
+        margin-right: -16px;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        margin-right: -16px;
+        margin-bottom: -8px;
+        justify-content: center;
+      }
+    }
+
+    #{ $self }__tab {
+      @include transition-colors;
+      margin-right: 24px;
+      padding: 16px 32px;
+      min-height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      color: $colorMainText;
+      background-color: transparent;
+      margin-bottom: 16px;
+      font-family: $mainFamily;
+
+      @media (max-width: $breakpoint-lg) {
+        margin-right: 16px;
+        padding: 16px 24px;
+        font-size: 14px;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 8px;
+        padding: 12px 22px;
+        font-size: 12px;
+        min-height: 36px;
+      }
+
+      &:hover,
+      &.active {
+        border-radius: 6px;
+        color: #fff;
+        background-color: #F02C2A;
+      }
+
+      &.active {
+        transition: opacity $timeTrans linear;
+        opacity: 1;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}

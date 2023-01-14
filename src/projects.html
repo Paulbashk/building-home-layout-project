@@ -1,0 +1,422 @@
+@@include('html/header.html', {
+  "title": "Каталог проектов"
+})
+<div class="nav-page">
+  <div class="grid grid-gap">
+    <div class="nav-page__wrapper">
+      <a href="#" class="text-link nav-page__link">Главная</a>
+      <a href="#" class="text-link nav-page__link">Каталог</a>
+      <a href="#" class="text-link nav-page__link">Дома из клееного бруса</a>
+    </div>
+  </div>
+</div>
+<section class="sc-projects" id="sc-projects">
+  <div class="grid grid-gap grid--nocenter">
+    <div class="sc-projects__wrapper-title">
+      <h2 class="title-h2 sc-projects__main-title sc-projects__main-title--catalog">дома из клееного бруса</h2>
+      <p class="text sc-projects__desc sc-projects__desc--catalog">Дома из клееного бруса являются основной сферой производства компании «Детинец». Мы создаем проекты вместе с клиентом, оправдывая его ожидания, предлагаем профессиональные архитектурные консультации и создаем трехмерные компьютерные визуализации. Все для того, чтобы гарантировать максимальный уровень сервиса для наших клиентов.</p>
+    </div>
+    <div class="sc-projects__wrapper-background">
+      <div class="sc-projects__container-size">
+        <div class="sc-projects__wrapper-filters">
+          <div class="sc-projects__wrapper-select wrapper-select sc-projects__wrapper-select--home">
+            <div class="wrapper-select__label">Назначение</div>
+            <select class="sc-projects__select wrapper-select__select" name="hometype">
+              <option value="Не важно">Не важно</option>
+              <option value="Гостиницы">Гостиницы</option>
+              <option value="Бани">Бани</option>
+              <option value="Беседки">Беседки</option>
+              <option value="Дома">Дома</option>
+            </select>          
+          </div>
+          <div class="sc-projects__wrapper-select wrapper-select sc-projects__wrapper-select--square">
+            <div class="wrapper-select__label">Общая площадь</div>
+            <select class="sc-projects__select wrapper-select__select" name="squaretype">
+              <option value="Не важно">Не важно</option>
+              <option value="до 50 кв.м.">до 50 кв.м.</option>
+              <option value="до 50 до 100 кв.м.">до 50 до 100 кв.м.</option>
+              <option value="от 100 до 150 кв.м.">от 100 до 150 кв.м.</option>
+              <option value="от 150 до 200 кв.м.">от 150 до 200 кв.м.</option>
+              <option value="более 200 кв.м.">более 200 кв.м.</option>
+            </select>          
+          </div> 
+          <div class="sc-projects__wrapper-select wrapper-select sc-projects__wrapper-select--material">
+            <div class="wrapper-select__label">Материал стен</div>
+            <select class="sc-projects__select wrapper-select__select" name="materialstype">
+              <option value="Не важно">Не важно</option>
+              <option value="Профилированный брус">Профилированный брус</option>
+              <option value="Оцилидиндрованное бревно">Оцилидиндрованное бревно</option>
+              <option value="Клееный брус">Клееный брус</option>
+              <option value="Каркас">Каркас</option>
+            </select>          
+          </div>  
+          <div class="sc-projects__wrapper-select wrapper-select sc-projects__wrapper-select--dimensions">
+            <div class="wrapper-select__label">Размеры</div>
+            <select class="sc-projects__select wrapper-select__select" name="dimensionstype">
+              <option value="Не важно">Не важно</option>
+              <option value="10x10">10x10</option>
+              <option value="10x11">10x11</option>
+              <option value="10x12">10x12</option>
+              <option value="10x13">10x13</option>
+              <option value="11x11">11x11</option>
+              <option value="10x10">11x15</option>
+              <option value="10x10">10x10</option>
+              <option value="10x11">10x11</option>
+              <option value="10x12">10x12</option>
+              <option value="10x13">10x13</option>
+              <option value="11x11">11x11</option>
+              <option value="10x10">11x15</option>
+            </select>          
+          </div>       
+        </div>
+        <div class="sc-projects__wrapper-buttons">
+          <div class="sc-projects__wrapper-flex">
+            <span class="text-min sc-projects__title-checkboxes">Этажность:</span>
+            <div class="sc-projects__wrapper-checkboxes">
+              <div class="sc-projects__wrapper-checkbox wrapper-checkbox">
+                <input class="wrapper-checkbox__checkbox" type="checkbox" id="doesntmatter" name="doesntmatter" />
+                <label class="wrapper-checkbox__label" for="doesntmatter">Не важно</label>
+              </div>  
+              <div class="sc-projects__wrapper-checkbox wrapper-checkbox">
+                <input class="wrapper-checkbox__checkbox" type="checkbox" id="onefloor" name="onefloor" />
+                <label class="wrapper-checkbox__label" for="onefloor">1 этаж</label>
+              </div>  
+              <div class="sc-projects__wrapper-checkbox wrapper-checkbox">
+                <input class="wrapper-checkbox__checkbox" type="checkbox" id="twofloor" name="twofloor" />
+                <label class="wrapper-checkbox__label" for="twofloor">2 этаж</label>
+              </div>  
+              <div class="sc-projects__wrapper-checkbox wrapper-checkbox">
+                <input class="wrapper-checkbox__checkbox" type="checkbox" id="attic" name="attic" />
+                <label class="wrapper-checkbox__label" for="attic">С мансардой</label>
+              </div>  
+            </div>
+          </div>
+          <div class="sc-projects__buttons">
+            <a class="sc-projects__btn sc-projects__btn--clear btn btn--clear" href="#">Очистить фильтр</a>
+            <div class="sc-projects__wrapper-button wrapper-button">
+              <a class="sc-projects__btn btn btn--red btn--result" href="#">Найден 151 проект</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid--nocenter">
+    <div class="grid__wrapper sc-projects__wrapper sc-projects__wrapper--catalog">
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project1.jpg" alt="Дом из бруса 1822" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 1818 <span class="project__footage">4х5 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">774 000 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project2.jpg" alt="Дом из бруса 1822" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 1822 <span class="project__footage">4х5 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">774 000 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project3.jpg" alt="Дом из бруса 134" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 134 <span class="project__footage">4х6 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">820 800 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project1.jpg" alt="Дом из бруса 1822" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 1818 <span class="project__footage">4х5 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">774 000 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project2.jpg" alt="Дом из бруса 1822" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 1822 <span class="project__footage">4х5 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">774 000 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project3.jpg" alt="Дом из бруса 134" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 134 <span class="project__footage">4х6 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">820 800 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project1.jpg" alt="Дом из бруса 1822" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 1818 <span class="project__footage">4х5 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">774 000 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project2.jpg" alt="Дом из бруса 1822" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 1822 <span class="project__footage">4х5 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">774 000 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project3.jpg" alt="Дом из бруса 134" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 134 <span class="project__footage">4х6 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">820 800 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project1.jpg" alt="Дом из бруса 1822" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 1818 <span class="project__footage">4х5 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">774 000 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project2.jpg" alt="Дом из бруса 1822" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 1822 <span class="project__footage">4х5 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">774 000 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-projects__project project">
+        <div class="project__wrapper-img">
+          <a class="project__img-link" href="#">
+            <img src="@img/projects/project3.jpg" alt="Дом из бруса 134" class="img project__img">
+          </a>
+        </div>
+        <div class="project__wrapper-content">
+          <div class="project__wrapper-title">
+            <h3 class="project__title-h3 title-h3"><a class="project__link" href="#">Дома из бруса 134 <span class="project__footage">4х6 м</span></a></h3>
+            <div class="project__text-clip">
+              <p class="project__desc text-min">Скромный загородный домик из клееного бруса вполне подходит для полноценного отдыха и сезонного проживания.</p>
+            </div>
+          </div>
+          <div class="project__wrapper-prices">
+            <div class="project__prices">
+              <span class="project__price-top">Стоимость от</span>
+              <span class="project__price-bottom">820 800 руб</span>
+            </div>
+            <div class="project__wrapper-button wrapper-button">
+              <a href="#" class="project__btn btn btn--more">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <div class="grid grid-gap grid--nocenter">
+    <div class="sc-projects__pagination pagination">
+      <div class="pagination__arrow pagination__arrow--back">
+        <i class="pagination__icon icon icon--back">
+          <svg class="pagination__svg icon__svg" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="pagination__path icon__path" d="M17 5.5L9.5 5.5L2 5.5M2 5.5L7.52632 10M2 5.5L7.52632 1" />
+          </svg>
+        </i>
+      </div>
+      <div class="pagination__wrapper-pages">
+        <div class="pagination__page pagination__page--active"><span class="pagination__index">01</span></div>
+        <div class="pagination__page"><span class="pagination__index">02</span></div>
+        <div class="pagination__page"><span class="pagination__index">03</span></div>
+        <div class="pagination__page"><span class="pagination__index">...</span></div>
+        <div class="pagination__page"><span class="pagination__index">10</span></div>
+      </div>
+      <div class="pagination__arrow pagination__arrow--next">
+        <i class="pagination__icon icon icon--next">
+          <svg class="pagination__svg icon__svg" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="pagination__path icon__path" d="M-1.43039e-07 5.5L7.5 5.5L15 5.5M15 5.5L9.47368 1M15 5.5L9.47368 10" />
+          </svg>
+        </i>
+      </div>  
+    </div>
+  </div>
+</section>
+@@include('html/footer.html', {})

@@ -1,0 +1,147 @@
+@@include('html/header.html', {
+  "title": "Пример модальных окон"
+})
+
+<style>
+  h1 {
+    font-size: 36px;
+    margin-bottom: 64px;
+    font-family: ProximaNova;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  .container-example {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-example a {
+    margin-bottom: 32px;
+    font-size: 32px;
+    text-decoration: none;
+    color: #000;
+    font-family: ProximaNova;
+    font-weight: 500;
+    text-align: center;
+    transition: color .3s linear;
+  }
+
+  .container-example a:hover {
+    color: rosybrown;
+  }
+
+  .container-example a:last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+<div class="modal modal--feedback" data-modal="feedback" tabindex="-1">
+  <div class="modal__overlay"></div>
+  <div class="modal__dialog">
+    <div class="modal__close">
+      <i class="icon modal__icon modal__icon--close">
+        <svg class="icon__svg modal__svg" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="icon__path modal__path" d="M1.4 1L21.4 21" stroke-width="2" stroke-linecap="round" />
+          <path class="icon__path modal__path" d="M21 1L0.999998 21" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </i>
+    </div>
+    <div class="modal__content modal__content--size">
+      <div class="modal__container-content">
+        <div class="modal__wrapper-title">
+          <h2 class="modal__title">Заказать <span class="modal__text-red">обратный звонок</span></h2>
+          <p class="modal__desc">Чтоб воспользоваться предложением, заполните форму</p>
+        </div>
+        <form class="modal__form" action="">
+          <div class="modal__wrapper-inputs">
+            <div class="modal__wrapper-input wrapper-input">
+              <input class="wrapper-input__input" type="text" placeholder="Ваше имя" name="name">
+            </div>
+            <div class="modal__wrapper-input wrapper-input">
+              <input class="wrapper-input__input" type="phone" placeholder="Введите Ваш номер" name="phone">
+            </div>
+          </div>
+          <div class="modal__wrapper-buttons">
+            <p class="modal__text-agreement">Нажимая на кнопку, Вы соглашаетесь с обработкой персональных данных</p>
+            <div class="modal__wrapper-button">
+              <a href="#" class="modal__submit btn btn--red btn--submit">Отправить заявку</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div class="modal modal--feedback modal--question" data-modal="question" tabindex="-1">
+  <div class="modal__overlay"></div>
+  <div class="modal__dialog">
+    <div class="modal__close">
+      <i class="icon modal__icon modal__icon--close">
+        <svg class="icon__svg modal__svg" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="icon__path modal__path" d="M1.4 1L21.4 21" stroke-width="2" stroke-linecap="round" />
+          <path class="icon__path modal__path" d="M21 1L0.999998 21" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </i>
+    </div>
+    <div class="modal__content modal__content--size">
+      <div class="modal__container-content">
+        <div class="modal__wrapper-title">
+          <h2 class="modal__title">Остались <span class="modal__text-red">вопросы?</span></h2>
+          <p class="modal__desc">Чтоб воспользоваться предложением, заполните форму</p>  
+        </div>
+        <form class="modal__form" action="">
+          <div class="modal__wrapper-inputs">
+            <div class="modal__wrapper-input wrapper-input">
+              <input class="wrapper-input__input" type="text" placeholder="Ваше имя" name="name">
+            </div>
+            <div class="modal__wrapper-input wrapper-input">
+              <input class="wrapper-input__input" type="email" placeholder="E-mail" name="mail">
+            </div>
+            <div class="modal__wrapper-input wrapper-input">
+              <input class="wrapper-input__input" type="phone" placeholder="Введите Ваш номер" name="phone">
+            </div>
+            <div class="modal__wrapper-select wrapper-select wrapper-select--gray">
+              <select class="modal__select wrapper-select__select" name="squaretype">
+                <option placeholder value="">Ваш город</option>
+                <option value="Москва">Москва</option>
+                <option value="Новосибирск">Новосибирск</option>
+                <option value="Кемерово">Кемерово</option>
+                <option value="Сочи">Сочи</option>
+                <option value="Красноярск">Красноярск</option>
+              </select> 
+            </div>
+            <div class="modal__wrapper-textarea wrapper-textarea">
+              <textarea class="wrapper-textarea__textarea" name="textarea" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+          <div class="modal__wrapper-buttons">
+            <p class="modal__text-agreement">Нажимая на кнопку, Вы соглашаетесь с обработкой персональных данных</p>
+            <div class="modal__wrapper-button">
+              <a href="#" class="modal__submit btn btn--red btn--submit">Отправить заявку</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="center">
+  <h1>Пример модальных окон</h1> 
+  <div class="container-example">
+    <a href="#" data-open-modal="feedback">Обратный звонок</a>
+    <a href="#" data-open-modal="question">Ответы на вопросы</a>
+  </div>
+</div>
+
+@@include('html/footer.html', {})

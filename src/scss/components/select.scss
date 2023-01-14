@@ -1,0 +1,201 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+.wrapper-select {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+
+  $borderSelect: #ECECEC;
+  $backgroundSelect: #FFFFFF;
+  $backgroundList: #FFFFFF;
+  $colorItemText: $colorMainText;
+  $colorPlacehoder: $colorMainText;
+  $backgroundItemHover: rgba(0,0,0,.15);
+  $arrowWidth: 5px;
+  $arrowColor: $colorMainText;
+
+  &__label {
+    font-family: $mainFamily;
+    font-size: 14px;
+    font-weight: 600;
+    color: $colorMainText;
+    margin-bottom: 12px;
+    margin-left: 2px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-left: 0;
+      font-size: 12px;
+    }  
+  }
+
+  .choices {
+    margin-top: auto;
+    
+    &__inner {
+      @include transition-colors;
+      padding: 0;
+      max-height: 46px;
+      min-height: 46px;
+      border-radius: unset;
+      border: 1px solid $borderSelect;
+      background-color: $backgroundSelect;
+      border-radius: 4px;
+
+      @media (max-width: $breakpoint-md) {
+        max-height: 40px;
+        min-height: 40px;
+      }  
+    }
+  
+    &__list {
+      transition-property: visibility;
+      transition-timing-function: linear;
+      transition-duration: $timeTrans;          
+      padding: 0;
+      z-index: 100;
+    }
+  
+    &__list--dropdown,
+    &__list[aria-expanded] {
+      background-color: $backgroundList;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      outline: none;
+      border-bottom: 2px solid #F3F3F3;
+      border-right: 2px solid #F3F3F3;
+      border-left: 2px solid #F3F3F3;
+      
+      &.is-active {
+        animation-name: fadeIn;
+        animation-timing-function: linear;
+        animation-duration: .3s;
+      }
+    }
+  
+    &__item {
+      @include transition-colors;
+      font-family: $mainFamily;
+      font-size: 14px;
+      color: $colorItemText;
+      padding: 15px 20px!important;
+      max-height: 46px;
+      min-height: 46px;
+
+      @media (max-width: $breakpoint-md) {
+        padding: 12px 18px!important;
+        font-size: 12px;
+        max-height: 40px;
+        min-height: 40px;
+      }  
+    }
+
+    &__placeholder {
+      font-family: $mainFamily;
+      font-size: 14px;
+      color: $colorPlacehoder;
+      opacity: 1;
+    }
+  
+    .choices__item--selectable.is-highlighted, 
+    .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+      background-color: $backgroundItemHover;
+    }  
+  
+    .choices__list--dropdown .choices__item--selectable::after, 
+    .choices__list[aria-expanded] .choices__item--selectable::after {
+      color: $colorItemText;
+    }
+  }
+
+  &--gray {
+    .choices {
+      &__inner,
+      &__item {
+        max-height: 62px;
+        min-height: 62px;
+        background-color: #F3F3F3;
+
+        @media (max-width: $breakpoint-md) {
+          font-size: 12px!important;
+          font-weight: 100!important;
+          min-height: 42px;
+          max-height: 42px;
+          padding: 0px 0px;
+        }
+      }
+
+      &__inner {
+        border: 1px solid #E2E2E2;
+        border-radius: 4px; 
+        color: #2f2f2f;
+      }
+
+      &__item {
+        padding: 24px 20px!important;
+        border: none;
+        color: #2f2f2f;
+
+        @media (max-width: $breakpoint-md) {
+          padding: 13px 15px!important;
+        }
+      }
+
+      &:after {
+        background-image: url("data:image/svg+xml,%3Csvg width='48' height='30' viewBox='0 0 48 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.64 0.359863L24 18.6799L42.36 0.359863L48 5.99986L24 29.9999L0 5.99986L5.64 0.359863Z' fill='black'/%3E%3C/svg%3E%0A")!important;    
+        opacity: 1 !important;
+
+        @media (max-width: $breakpoint-md) {
+          right: 10px!important;
+          background-size: 7px!important;
+          opacity: 1!important;
+        }
+      }
+    }
+
+    .choices__item--choice {
+      @media (max-width: $breakpoint-md) {
+        padding: 12px 15px!important;
+        min-height: 32px!important;
+        max-height: 32px!important;
+      }      
+    }
+
+    .choices__item--selectable.is-highlighted, 
+    .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+      background-color: #fff!important;
+    }  
+  }
+
+  .choices__item.choices__item--choice.choices__placeholder {
+    display: none;
+  }
+
+  .choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 16px;
+  }  
+  
+  /* button arrow */
+  .choices[data-type*=select-one]::after {
+    right: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='30' viewBox='0 0 48 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.64 0.359863L24 18.6799L42.36 0.359863L48 5.99986L24 29.9999L0 5.99986L5.64 0.359863Z' fill='black'/%3E%3C/svg%3E%0A");    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+    opacity: .4;
+    height: 11px;
+    width: 18px;
+    margin-top: -5px;
+    border: none!important;
+    transition: transform $timeTrans linear;
+
+    @media (max-width: $breakpoint-md) {
+      right: 15px;
+    } 
+  }
+
+  .choices[data-type*=select-one].is-open::after {
+    transform: rotate(180deg);
+  }
+}

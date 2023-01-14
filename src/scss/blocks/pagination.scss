@@ -1,0 +1,116 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Blocks Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+.pagination {
+  $self: &;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__wrapper-pages {
+    display: flex;
+    align-items: center;
+  }
+
+  &__page {
+    @include transition-colors;
+    min-width: 34px;
+    min-height: 34px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    margin-right: 16px;
+
+    @media (max-width: $breakpoint-md) {
+      min-width: 28px;
+      min-height: 28px;
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &--active {
+      cursor: pointer;
+      background-color: #898989;
+      border: 2px solid #898989;
+
+      #{ $self }__index {
+        color: #fff;
+      }
+    }
+
+    &--active {
+      transition: opacity $timeTrans linear;
+      opacity: 1;
+
+      #{ $self }__index {
+        color: #fff;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  &__index {
+    font-family: $mainFamily;
+    font-size: 14px;
+    font-weight: 600;
+    user-select: none;
+    color: #9C9C9C;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 11px;
+      margin-top: 2px;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    
+    &:hover {
+      cursor: pointer;
+      user-select: none;
+
+      #{ $self }__svg {
+        #{ $self }__path {
+          stroke: #F7322F;
+        }
+      }
+    }
+  }
+
+  &__arrow--back {
+    margin-right: 30px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-right: 24px;
+    }
+  }
+
+  &__arrow--next {
+    margin-left: 30px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-left: 24px;
+    }
+  }
+}

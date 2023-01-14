@@ -1,0 +1,50 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+// Components: ICON
+.icon {
+  $self: &;
+
+  &__svg,
+  &__path {
+    transition-property: fill, stroke;
+    transition-timing-function: linear;
+    transition-duration: $timeTrans;
+  }
+
+  &--checkmark {
+    #{ $self }__svg {
+      width: 24px;
+      height: 21px;
+      min-width: 24px;
+      min-height: 21px;
+
+      @media (max-width: $breakpoint-md) {
+        width: 20px;
+        height: 17px;
+        min-width: 20px;
+        min-height: 17px;
+      }
+
+      #{ $self }__path {
+        fill: #F12D2B;
+      }
+    }
+  }
+
+  &--back,
+  &--next {
+    #{ $self }__svg {
+      width: 15px;
+      height: 14px;
+      min-width: 15px;
+      min-height: 14px;
+
+      #{ $self }__path {
+        stroke: $colorMainText;
+      }
+    }
+  }
+}
+
